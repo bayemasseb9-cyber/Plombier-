@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plomberie Express | Disponible 24/7</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#f4f6f8;
+  color:#333;
+}
+
+/* HEADER */
+header{
+  background:#0077cc;
+  color:white;
+  text-align:center;
+  padding:40px 20px;
+}
+
+header h1{
+  font-size:2.2em;
+  margin-bottom:10px;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:30px 20px;
+}
+
+.hero p{
+  font-size:1.2em;
+  margin-bottom:20px;
+  font-weight:bold;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 22px;
+  margin:5px;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+.call{ background:#28a745; }
+.whatsapp{ background:#25d366; }
+
+/* SERVICES */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+.services{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+}
+
+.card{
+  background:white;
+  width:300px;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card h3{
+  padding:15px 10px 5px;
+  color:#0077cc;
+}
+
+.card p{
+  padding:0 10px 20px;
+}
+
+/* FOOTER */
+footer{
+  margin-top:40px;
+  background:#0077cc;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .services{
+    flex-direction:column;
+    align-items:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Plomberie Express</h1>
+  <p>Intervention rapide • Disponible 24/7</p>
+</header>
+
+<section class="hero">
+  <p>Urgence plomberie ? Appelez maintenant !</p>
+  <a class="btn call" href="tel:+221782778704">📞 Appeler</a>
+  <a class="btn whatsapp" href="https://wa.me/221782778704" target="_blank">WhatsApp</a>
+</section>
+
+<div class="container">
+  <div class="services">
+
+    <div class="card">
+      <img src="image.jpg" alt="Installation">
+      <h3>Installation</h3>
+      <p>Vous cherchez un installateur plombier ? Contactez-moi pour un travail propre et garanti.</p>
+    </div>
+
+    <div class="card">
+      <img src="image1.jpg" alt="Débouchage">
+      <h3>Débouchage</h3>
+      <p>Évier, WC ou canalisation bouchée ? Intervention rapide et efficace.</p>
+    </div>
+
+    <div class="card">
+      <img src="image2.jpg" alt="Dépannage">
+      <h3>Dépannage</h3>
+      <p>Fuite d’eau ou panne urgente ? Disponible immédiatement 24h/24.</p>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  © 2026 Plomberie Express | +221 78 277 87 04
+</footer>
+
+</body>
+</html>
