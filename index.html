@@ -3,14 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plomberie Express | Disponible 24/7</title>
+
+<title>Plombier à Mbour 24/7 | Réservation en ligne - Plomberie Express</title>
+<meta name="description" content="Plombier professionnel à Mbour disponible 24/7. Réservez votre dépannage, débouchage ou installation sanitaire en ligne. Intervention rapide à Mbour.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Poppins', sans-serif;
 }
 
 body{
@@ -18,107 +22,147 @@ body{
   color:#333;
 }
 
-/* HEADER */
 header{
-  background:#0077cc;
+  background:linear-gradient(135deg,#0077cc,#00c6ff);
   color:white;
   text-align:center;
   padding:40px 20px;
 }
 
+.logo{
+  width:150px;
+  margin-bottom:15px;
+}
+
 header h1{
-  font-size:2.2em;
+  font-size:2em;
   margin-bottom:10px;
-}
-
-/* HERO */
-.hero{
-  text-align:center;
-  padding:30px 20px;
-}
-
-.hero p{
-  font-size:1.2em;
-  margin-bottom:20px;
-  font-weight:bold;
 }
 
 .btn{
   display:inline-block;
-  padding:12px 22px;
-  margin:5px;
-  color:white;
+  padding:12px 25px;
+  margin:10px 5px;
+  border-radius:30px;
   text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
-  transition:.3s;
-}
-
-.btn:hover{
-  transform:scale(1.05);
+  color:white;
+  font-weight:600;
+  transition:0.3s;
 }
 
 .call{ background:#28a745; }
 .whatsapp{ background:#25d366; }
 
-/* SERVICES */
-.container{
+.btn:hover{
+  transform:scale(1.05);
+}
+
+.section{
+  padding:60px 20px;
   max-width:1100px;
   margin:auto;
-  padding:20px;
+}
+
+.section h2{
+  text-align:center;
+  margin-bottom:30px;
+  color:#0077cc;
 }
 
 .services{
-  display:flex;
-  flex-wrap:wrap;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
-  justify-content:center;
 }
 
 .card{
   background:white;
-  width:300px;
-  border-radius:12px;
-  overflow:hidden;
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
-  transition:.3s;
-}
-
-.card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+  text-align:center;
 }
 
 .card img{
   width:100%;
-  height:200px;
-  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:15px;
 }
 
-.card h3{
-  padding:15px 10px 5px;
-  color:#0077cc;
+.card:hover{
+  transform:translateY(-8px);
 }
 
-.card p{
-  padding:0 10px 20px;
+/* FORMULAIRE */
+form{
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* FOOTER */
+form input, form select, form textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+form button{
+  background:#0077cc;
+  color:white;
+  padding:12px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+form button:hover{
+  background:#005fa3;
+}
+
+#confirmation{
+  display:none;
+  text-align:center;
+  color:green;
+  margin-top:15px;
+  font-weight:600;
+}
+
+iframe{
+  width:100%;
+  height:300px;
+  border:none;
+  border-radius:15px;
+}
+
 footer{
-  margin-top:40px;
   background:#0077cc;
   color:white;
   text-align:center;
   padding:20px;
+  margin-top:40px;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-  .services{
-    flex-direction:column;
-    align-items:center;
-  }
+/* FLOAT WHATSAPP */
+.float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:60px;
+  height:60px;
+  background:#25d366;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:26px;
+  color:white;
+  text-decoration:none;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 </style>
 </head>
@@ -126,43 +170,79 @@ footer{
 <body>
 
 <header>
-  <h1>Plomberie Express</h1>
-  <p>Intervention rapide • Disponible 24/7</p>
+  <img src="https://i.ibb.co/LzB5dLjm/poh.png" alt="Logo Plombier Mbour" class="logo">
+  <h1>Plombier Professionnel à Mbour</h1>
+  <p>Disponible 24/7 • Intervention rapide</p>
+  <a href="tel:+221782778704" class="btn call">📞 Appeler</a>
+  <a href="https://wa.me/221782778704" class="btn whatsapp">WhatsApp</a>
 </header>
 
-<section class="hero">
-  <p>Urgence plomberie ? Appelez maintenant !</p>
-  <a class="btn call" href="tel:+221782778704">📞 Appeler</a>
-  <a class="btn whatsapp" href="https://wa.me/221782778704" target="_blank">WhatsApp</a>
+<section class="section">
+  <h2>Nos Services</h2>
+  <div class="services">
+    <div class="card">
+      <img src="https://i.ibb.co/mF0NJTQy/yop.png" alt="Installation Sanitaire">
+      <h3>Installation Sanitaire</h3>
+      <p>Installation complète WC, lavabos et équipements modernes.</p>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/7JxwmBp0/kop.png" alt="Débouchage">
+      <h3>Débouchage</h3>
+      <p>Canalisations et WC débouchés rapidement à Mbour.</p>
+    </div>
+    <div class="card">
+      <img src="https://i.ibb.co/7JDqMJV1/uop.png" alt="Dépannage Urgent">
+      <h3>Dépannage Urgent</h3>
+      <p>Réparation fuite d’eau et intervention urgente 24h/24.</p>
+    </div>
+  </div>
 </section>
 
-<div class="container">
-  <div class="services">
+<section class="section">
+  <h2>Réserver une intervention</h2>
+  <form id="reservationForm" action="https://formsubmit.co/bayemasseba20@gmail.com" method="POST">
+    <input type="text" name="Nom" placeholder="Votre nom" required>
+    <input type="tel" name="Téléphone" placeholder="Votre numéro" required>
+    <select name="Service" required>
+      <option value="">Choisir un service</option>
+      <option>Installation</option>
+      <option>Débouchage</option>
+      <option>Dépannage urgent</option>
+    </select>
+    <textarea name="Message" placeholder="Décrivez votre problème" rows="4"></textarea>
+    <input type="hidden" name="_captcha" value="false">
+    <button type="submit">Réserver maintenant</button>
+  </form>
+  <div id="confirmation">Merci ! Votre réservation a été envoyée. Nous vous contacterons bientôt.</div>
+</section>
 
-    <div class="card">
-      <img src="image.jpg" alt="Installation">
-      <h3>Installation</h3>
-      <p>Vous cherchez un installateur plombier ? Contactez-moi pour un travail propre et garanti.</p>
-    </div>
-
-    <div class="card">
-      <img src="image1.jpg" alt="Débouchage">
-      <h3>Débouchage</h3>
-      <p>Évier, WC ou canalisation bouchée ? Intervention rapide et efficace.</p>
-    </div>
-
-    <div class="card">
-      <img src="image2.jpg" alt="Dépannage">
-      <h3>Dépannage</h3>
-      <p>Fuite d’eau ou panne urgente ? Disponible immédiatement 24h/24.</p>
-    </div>
-
-  </div>
-</div>
+<section class="section">
+  <h2>Zone d’intervention</h2>
+  <iframe src="https://www.google.com/maps?q=Mbour,+Senegal&output=embed" loading="lazy"></iframe>
+</section>
 
 <footer>
-  © 2026 Plomberie Express | +221 78 277 87 04
+  © 2026 Plomberie Express Mbour | +221 78 277 87 04
 </footer>
+
+<a href="https://wa.me/221782778704" class="float">💬</a>
+
+<script>
+document.getElementById("reservationForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    const form = e.target;
+    fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        document.getElementById("confirmation").style.display = "block";
+        form.reset();
+    }).catch(error => {
+        alert("Erreur lors de l'envoi. Veuillez réessayer.");
+    });
+});
+</script>
 
 </body>
 </html>
